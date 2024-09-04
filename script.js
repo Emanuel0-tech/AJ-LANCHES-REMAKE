@@ -94,8 +94,9 @@ function updateCartModal() {
 
 }
 
-cartItensContainer.addEventListener("click", function(event){if(event.target.classList.contains("remove-from-cart-btn")){
+cartItensContainer.addEventListener("click", function (event) {
+  if (event.target.classList.contains("remove-from-cart-btn")) {
     const name = event.target.getAttribute("data-name")
-}
+  }
 
 })
