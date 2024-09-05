@@ -1,342 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="./styles/output.css" />
-    <title>AJLANCHES LANCHES - MAIS DO QUE SABOR, UMA EXPERIENCIA</title>
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header>
-      <button
-        class="flex flex-row justify-end items-center gap-2 py-2 p-2 text-white font-bold"
-        id="cart-btn"
-      >
-        (<span id="cart-count">0</span>)
-        <i class="fa fa-cart-plus texy-lg text-white"></i>
-      </button>
 
-      <nav class="w-full h-full flex flex-col justify-center items-center">
-        <img
-          src="./assets/logo.png"
-          alt="Logo AJ Lanches"
-          class="w-36 h-36 rounded-full shadow-lg hover:scale-110 duration-200"
-        />
-        <h1 class="text-4xl mt-4 mb-2 font-bold text-white">AJ Lanches</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="./styles/output.css" />
+  <title>AJLANCHES LANCHES - MAIS DO QUE SABOR, UMA EXPERIENCIA</title>
+</head>
 
-        <span class="text-white font-medium">562 Lujop Circle</span>
+<body>
+  <!-- HEADER -->
+  <header>
+    <button class="flex flex-row justify-end items-center gap-2 py-2 p-2 text-white font-bold" id="cart-btn">
+      (<span id="cart-count">0</span>)
+      <i class="fa fa-cart-plus texy-lg text-white"></i>
+    </button>
 
-        <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="data-span">
-          <span class="text-white font-medium">Seg á Dom - 8:00 ás 22:00</span>
-        </div>
-      </nav>
-    </header>
-    <!-- FIM DO HEADER -->
+    <nav class="w-full h-full flex flex-col justify-center items-center">
+      <img src="./assets/logo.png" alt="Logo AJ Lanches"
+        class="w-36 h-36 rounded-full shadow-lg hover:scale-110 duration-200" />
+      <h1 class="text-4xl mt-4 mb-2 font-bold text-white">AJ Lanches</h1>
 
-    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
-      Conheça nosso menu
-    </h2>
-    <!-- MENU -->
-        <div id="menu">
-      <div class="mx-auto max-w-7xl px-2 my-2">
-        <h2 class="font-bold text-3xl">Lanches</h2>
+      <span class="text-white font-medium">562 Lujop Circle</span>
+
+      <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="data-span">
+        <span class="text-white font-medium">Seg á Dom - 8:00 ás 22:00</span>
       </div>
+    </nav>
+  </header>
+  <!-- FIM DO HEADER -->
 
-      <main
-        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 py-2"
-      >
-
-        <!-- ITEM -->
-        <div class="flex gap-2">
-          <img
-            src="./assets/hamb-1.png"
-            alt=""
-            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
-          />
-
-          <div class="w-full">
-            <p class="font-bold">Hamburguer Smash</p>
-            <p class="text-sm">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-
-            <div class="flex itens-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 18.00</p>
-              <button
-                class="bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
-                data-name="Hamburguer Smash"
-                data-price="18.00"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- FIM DO ITEM -->
-
-        <!-- ITEM -->
-        <div class="flex gap-2">
-          <img
-            src="./assets/hamb-2.png"
-            alt=""
-            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
-          />
-
-          <div class="w-full">
-            <p class="font-bold">Hamburguer Duplo</p>
-            <p class="text-sm">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-
-            <div class="flex itens-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 32.00</p>
-              <button
-                class="bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
-                data-name="Hamburguer Duplo"
-                data-price="32.00"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- FIM DO ITEM -->
-
-        <!-- ITEM -->
-        <div class="flex gap-2">
-          <img
-            src="./assets/hamb-3.png"
-            alt=""
-            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
-          />
-
-          <div class="w-full">
-            <p class="font-bold">Hamburguer Simples</p>
-            <p class="text-sm">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-
-            <div class="flex itens-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 15.00</p>
-              <button
-                class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
-                data-name="Hamburguer Simples"
-                data-price="15.00"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- FIM DO ITEM -->
-
-        <!-- ITEM -->
-        <div class="flex gap-2">
-          <img
-            src="./assets/hamb-4.png"
-            alt=""
-            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
-          />
-
-          <div class="w-full">
-            <p class="font-bold">Hamburguer De Luxo</p>
-            <p class="text-sm">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-
-            <div class="flex itens-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 50.00</p>
-              <button
-                class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
-                data-name="Hamburguer De Luxo"
-                data-price="50.00"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- FIM DO ITEM -->
-
-        <!-- ITEM -->
-        <div class="flex gap-2">
-          <img
-            src="./assets/hamb-5.png"
-            alt=""
-            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
-          />
-
-          <div class="w-full">
-            <p class="font-bold">Hamburguer Da Casa</p>
-            <p class="text-sm">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-
-            <div class="flex itens-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 42.00</p>
-              <button
-                class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
-                data-name="Hamburguer Da Casa"
-                data-price="42.00"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-          </main>
-        <!-- FIM DO ITEM -->
-      <div class="mx-auto max-w-7xl px-2 my-2">
-        <h2 class="font-bold text-3xl">Bebidas</h2>
-      </div>
-      <!-- BEBIDAS -->
-      <div 
-        id="menu" <div class="mx-auto max-w-7xl px-2 my-2">
-        <h2 class="font-bold text-3xl">Bebidas</h2>
-      </div>
-<main
-        class="grid grid-rows-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 py-2"
-      >
-
-
-        <!-- ITEM -->
-        <div class="flex gap-2">
-          <img
-            src="./assets/refri-1.png"
-            alt=""
-            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
-          />
-
-          <div class="w-full">
-            <p class="font-bold">Coca Lata</p>
-            <p class="text-sm">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-            <div class="flex itens-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 6.00</p>
-              <button
-                class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
-                data-name="Coca Lata"
-                data-price="6.00"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- FIM DO ITEM -->
-
-        <!-- ITEM -->
-        <div class="flex gap-2">
-          <img
-            src="./assets/refri-2.png"
-            alt=""
-            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
-          />
-
-          <div class="w-full">
-            <p class="font-bold">Guaraná Lata</p>
-            <p class="text-sm">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-            <div class="flex itens-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 6.00</p>
-              <button
-                class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
-                data-name="Guaraná Lata"
-                data-price="6.00"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- FIM DO ITEM -->
-
-        
-        <!-- FIM DO ITEM -->
-      </div>
-
-      <!-- FIM BEBIDAS -->
+  <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+    Conheça nosso menu
+  </h2>
+  <!-- MENU -->
+  <div id="menu">
+    <div class="mx-auto max-w-7xl px-2 my-2">
+      <h2 class="font-bold text-3xl">Lanches</h2>
     </div>
+
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 py-2">
+
+      <!-- ITEM -->
+      <div class="flex gap-2">
+        <img src="./assets/hamb-1.png" alt=""
+          class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+
+        <div class="w-full">
+          <p class="font-bold">Hambúrguer Smash</p>
+          <p class="text-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </p>
+
+          <div class="flex itens-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 18.00</p>
+            <button
+              class="bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
+              data-name="Hambúrguer Smash" data-price="18.00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DO ITEM -->
+
+      <!-- ITEM -->
+      <div class="flex gap-2">
+        <img src="./assets/hamb-2.png" alt=""
+          class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+
+        <div class="w-full">
+          <p class="font-bold">Hambúrguer Duplo</p>
+          <p class="text-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </p>
+
+          <div class="flex itens-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 32.00</p>
+            <button
+              class="bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
+              data-name="Hambúrguer Duplo" data-price="32.00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DO ITEM -->
+
+      <!-- ITEM -->
+      <div class="flex gap-2">
+        <img src="./assets/hamb-3.png" alt=""
+          class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+
+        <div class="w-full">
+          <p class="font-bold">Hambúrguer Simples</p>
+          <p class="text-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </p>
+
+          <div class="flex itens-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 15.00</p>
+            <button
+              class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
+              data-name="Hambúrguer Simples" data-price="15.00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DO ITEM -->
+
+      <!-- ITEM -->
+      <div class="flex gap-2">
+        <img src="./assets/hamb-4.png" alt=""
+          class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+
+        <div class="w-full">
+          <p class="font-bold">Hambúrguer De Luxo</p>
+          <p class="text-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </p>
+
+          <div class="flex itens-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 50.00</p>
+            <button
+              class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
+              data-name="Hambúrguer De Luxo" data-price="50.00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DO ITEM -->
+
+      <!-- ITEM -->
+      <div class="flex gap-2">
+        <img src="./assets/hamb-5.png" alt=""
+          class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+
+        <div class="w-full">
+          <p class="font-bold">Hambúrguer Da Casa</p>
+          <p class="text-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </p>
+
+          <div class="flex itens-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 42.00</p>
+            <button
+              class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
+              data-name="Hambúrguer Da Casa" data-price="42.00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DO ITEM -->
+
+      <!-- ITEM -->
+      <div class="flex gap-2">
+        <img src="./assets/hamb-6.png" alt=""
+          class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+
+        <div class="w-full">
+          <p class="font-bold">Hambúrguer Vegano/Vegetariano</p>
+          <p class="text-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </p>
+
+          <div class="flex itens-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 50.00</p>
+            <button
+              class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
+              data-name="Hambúrguer Vegano/Vegetariano" data-price="50.00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DO ITEM -->
+
+    </main>
+
+    <!-- BEBIDAS -->
+    <div id="menu" class="mx-auto max-w-7xl px-2 my-2">
+      <h2 class="font-bold text-3xl">Bebidas</h2>
+    </div>
+    <main class="grid grid-rows-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 py-2">
+
+
+      <!-- ITEM -->
+      <div class="flex gap-2">
+        <img src="./assets/refri-1.png" alt=""
+          class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+
+        <div class="w-full">
+          <p class="font-bold">Coca Lata</p>
+          <p class="text-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </p>
+          <div class="flex itens-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 6.00</p>
+            <button
+              class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
+              data-name="Coca Lata" data-price="6.00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DO ITEM -->
+
+      <!-- ITEM -->
+      <div class="flex gap-2">
+        <img src="./assets/refri-2.png" alt=""
+          class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+
+        <div class="w-full">
+          <p class="font-bold">Guaraná Lata</p>
+          <p class="text-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </p>
+          <div class="flex itens-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 6.00</p>
+            <button
+              class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
+              data-name="Guaraná Lata" data-price="6.00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DO ITEM -->
+
+
+      <!-- FIM DO ITEM -->
+  </div>
+
+  <!-- FIM BEBIDAS -->
+  </div>
   </main>
-    <!-- FIM DO MENU -->
+  <!-- FIM DO MENU -->
 
-    <!-- MODAL CART -->
-    <div
-      class="bg-black/60 w-full h-full py-2 p-2 fixed top-0 left-0 z-[99] hidden items-center justify-center"
-      id="cart-modal"
-    >
-      <div
-        class="bg-white p-5 font-bold rounded-md min-w-[90%] md:min-w-[600px]"
-      >
-        <h2 class="text-center font-bold text-2xl">Meu Carrinho</h2>
+  <!-- MODAL CART -->
+  <div class="bg-black/60 w-full h-full py-2 p-2 fixed top-0 left-0 z-[99] hidden items-center justify-center"
+    id="cart-modal">
+    <div class="bg-white p-5 font-bold rounded-md min-w-[90%] md:min-w-[600px]">
+      <h2 class="text-center font-bold text-2xl">Meu Carrinho</h2>
 
-        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+      <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
 
-        <p class="font-bold">Total:<span id="cart-total">0.00</span></p>
+      <p class="font-bold">Total:<span id="cart-total">0.00</span></p>
 
-        <h2 class="font-bold">Selecione a forma de pagamento:</h2>
-        <div class="space-y-4">
-          <button
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Cartão de Crédito
-          </button>
-          <button
-            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Boleto Bancário
-          </button>
-          <button
-            class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Pix
-          </button>
-        </div>
+      <h2 class="font-bold">Selecione a forma de pagamento:</h2>
+      <div class="space-y-4">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Cartão de Crédito
+        </button>
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+          Boleto Bancário
+        </button>
+        <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+          Pix
+        </button>
+      </div>
 
-        <p class="font-bold mt-4">Endereço de entrega:</p>
-        <input
-          type="text"
-          placeholder="Digite seu endereço"
-          id="address"
-          class="w-full border-2 px-1 rounded my-2"
-        />
+      <p class="font-bold mt-4">Endereço de entrega:</p>
+      <input type="text" placeholder="Digite seu endereço" id="address" class="w-full border-2 px-1 rounded my-2" />
 
-        <p class="text-red-500 hidden" id="address-complete">
-          Digite seu endereço completo
-        </p>
+      <p class="text-red-500 hidden" id="address-complete">
+        Digite seu endereço completo
+      </p>
 
-        <div class="flex items-center justify-between mt-4 w-full">
-          <button id="close-modal-btn">Fechar</button>
-          <button
-            id="checkout-btn"
-            class="bg-green-500 hover: bg-green-700 text-white px-4 py-1 rounded"
-          >
-            Finalizar Pedido
-          </button>
-        </div>
+      <div class="flex items-center justify-between mt-4 w-full">
+        <button id="close-modal-btn">Fechar</button>
+        <button id="checkout-btn" class="bg-green-500 hover: bg-green-700 text-white px-4 py-1 rounded">
+          Finalizar Pedido
+        </button>
       </div>
     </div>
-    <!-- MODAL CART -->
+  </div>
+  <!-- MODAL CART -->
 
-    <script src="script.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  </body>
+  <script src="script.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
 </html>
