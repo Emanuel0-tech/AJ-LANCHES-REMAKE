@@ -67,12 +67,14 @@ function updateCartModal() {
     <div class="flex items-center justify-between">
         <div>
         <p class="font-medium">${item.name}</p>
-        <p>${item.quality}</p>
+        <p>Porções:${item.quality}</p>
         <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
         </div>
 
         <div>
-            <button>
+            <button class="remove-from-cart-btn bg-red-500 hover:bg-red-500 hover:bg-red-600 active:bg-red-700 focus:outline-none focus:ring focus:ring-red-300 text-white px-5 rounded" data-name="${
+              item.name
+            }">
                 Remover
             </button>
         </div>
@@ -83,7 +85,7 @@ function updateCartModal() {
     total += item.price * item.quality;
 
     cartItensContainer.appendChild(cartItemElement);
-  })
+  });
 
   cartTotal.textContent = total.toLocaleString("pt-BR", {
     style: "currency",
@@ -91,12 +93,59 @@ function updateCartModal() {
   });
 
   cartCounter.innerHTML = cart.length;
-
 }
 
 cartItensContainer.addEventListener("click", function (event) {
   if (event.target.classList.contains("remove-from-cart-btn")) {
-    const name = event.target.getAttribute("data-name")
+    const name = event.target.getAttribute("data-name");
+
+    removeItemCart(name);
+  }
+});
+
+function removeItemCart(name) {
+  const index = cart.findIndex((item) => item.name === name);
+  if (index !== -1) {
+    const item = cart[index];
+
+    if (item.quality > 1) {
+      item.quality -= 1;
+      updateCartModal();
+      return;
+    }
+
+    cart.splice(index, 1);
+    updateCartModal();
+  }
+}
+
+addressInput.addEventListener("input", function (event) {
+  let inputValue = event.target.value;
+
+  if (inputValue !== "") {
+    addressInput.classList.remove("border-red-500");
+    addressComplete.classList.add("hidden");
+  }
+});
+
+checkoutBtn.addEventListener("click", function () {
+  if (cart.length === 0) return;
+  if (addressInput.value === "") {
+    addressComplete.classList.remove("hidden");
+    addressInput.classList.add("border-red-500");
+    return;
   }
 
-})
+  Toastify({
+    text: "Pedido a caminho",
+    duration: 3000,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
+    gravity: "top", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient( #00b09b, #96c93d)",
+    },
+  }).showToast();
+});

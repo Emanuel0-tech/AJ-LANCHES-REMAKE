@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "dev": "npx tailwindcss -i ./styles/styles.css -o ./styles/output.css --watch"
+    "dev": "npx tailwindcss -i ./styles/styles.css -o ./styles/output.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -11,5 +11,11 @@
   "description": "",
   "devDependencies": {
     "tailwindcss": "^3.4.10"
+  },
+  "dependencies": {
+    "add": "^2.0.6",
+    "react-toastify": "^10.0.5",
+    "toastify-js": "^1.12.0",
+    "yarn": "^1.22.22"
   }
 }

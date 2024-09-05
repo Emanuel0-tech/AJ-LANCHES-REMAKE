@@ -16,13 +16,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./styles/output.css" />
-    <title>AJ LANCHES - MAIS DO QUE SABOR, UMA EXPERIENCIA</title>
+    <title>AJLANCHES LANCHES - MAIS DO QUE SABOR, UMA EXPERIENCIA</title>
   </head>
   <body>
     <!-- HEADER -->
     <header class="w-full h-[420px] bg-zinc-500 bg-home bg-cover bg-center">
-      <div class="w-full h-full flex flex-col justify-center items-center">
+      <button
+        class="flex flex-row justify-end items-center gap-2 py-2 p-2 text-white font-bold"
+        id="cart-btn"
+      >
+        (<span id="cart-count">0</span>)
+        <i class="fa fa-cart-plus texy-lg text-white"></i>
+      </button>
+
+      <nav class="w-full h-full flex flex-col justify-center items-center">
         <img
           src="./assets/logo.png"
           alt="Logo AJ Lanches"
@@ -35,7 +44,7 @@
         <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="data-span">
           <span class="text-white font-medium">Seg á Dom - 8:00 ás 22:00</span>
         </div>
-      </div>
+      </nav>
     </header>
     <!-- FIM DO HEADER -->
 
@@ -44,8 +53,11 @@
     </h2>
     <!-- MENU -->
     <div id="menu">
+      <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl">Lanches</h2>
+      </div>
       <main
-        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl"
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 py-2"
       >
         <!-- ITEM -->
         <div class="flex gap-2">
@@ -64,7 +76,7 @@
             <div class="flex itens-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 18.00</p>
               <button
-                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                class="bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
                 data-name="Hamburguer Smash"
                 data-price="18.00"
               >
@@ -92,7 +104,7 @@
             <div class="flex itens-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 32.00</p>
               <button
-                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                class="bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
                 data-name="Hamburguer Duplo"
                 data-price="32.00"
               >
@@ -120,7 +132,7 @@
             <div class="flex itens-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 15.00</p>
               <button
-                class="bg-gray-500 hover:bg-gray-900  px-5 rounded add-to-cart-btn"
+                class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
                 data-name="Hamburguer Simples"
                 data-price="15.00"
               >
@@ -148,7 +160,7 @@
             <div class="flex itens-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 50.00</p>
               <button
-                class="bg-gray-500 hover:bg-gray-900 px-5 rounded add-to-cart-btn"
+                class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
                 data-name="Hamburguer De Luxo"
                 data-price="50.00"
               >
@@ -176,7 +188,7 @@
             <div class="flex itens-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 42.00</p>
               <button
-                class="bg-gray-500 hover:bg-gray-900 px-5 rounded add-to-cart-btn"
+                class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
                 data-name="Hamburguer Da Casa"
                 data-price="42.00"
               >
@@ -210,7 +222,7 @@
             <div class="flex itens-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 6.00</p>
               <button
-                class="bg-gray-500 hover:bg-gray-900 px-5 rounded add-to-cart-btn"
+                class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
                 data-name="Coca Lata"
                 data-price="6.00"
               >
@@ -234,7 +246,7 @@
             <div class="flex itens-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 6.00</p>
               <button
-                class="bg-gray-500 hover:bg-gray-900 px-5 rounded add-to-cart-btn"
+                class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
                 data-name="Guaraná Lata"
                 data-price="6.00"
               >
@@ -258,7 +270,7 @@
             <div class="flex itens-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 6.00</p>
               <button
-                class="bg-gray-500 hover:bg-gray-900 px-5 rounded add-to-cart-btn"
+                class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
                 data-name="Guaraná Lata"
                 data-price="6.00"
               >
@@ -282,7 +294,7 @@
             <div class="flex itens-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ 6.00</p>
               <button
-                class="bg-gray-500 hover:bg-gray-900 px-5 rounded add-to-cart-btn"
+                class="bg-green-500 hover:bg-green-500 hover:bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 px-5 rounded add-to-cart-btn"
                 data-name="Guaraná Lata"
                 data-price="6.00"
               >
@@ -301,7 +313,8 @@
 
     <!-- MODAL CART -->
     <div
-      class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] hidden items-center justify-center" id="cart-modal"
+      class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] hidden items-center justify-center"
+      id="cart-modal"
     >
       <div
         class="bg-white p-5 font-bold rounded-md min-w-[90%] md:min-w-[600px]"
@@ -311,6 +324,25 @@
         <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
 
         <p class="font-bold">Total:<span id="cart-total">0.00</span></p>
+
+        <h2 class="font-bold">Selecione a forma de pagamento:</h2>
+        <div class="space-y-4">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Cartão de Crédito
+          </button>
+          <button
+            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Boleto Bancário
+          </button>
+          <button
+            class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Pix
+          </button>
+        </div>
 
         <p class="font-bold mt-4">Endereço de entrega:</p>
         <input
@@ -337,20 +369,7 @@
     </div>
     <!-- MODAL CART -->
 
-    <!-- BUTTON CART BTN -->
-    <footer
-      class="w-full bg-red-500 py-2 fixed bottom-0 z-40 flex items-center justify-center"
-    >
-      <button
-        class="flex items-center gap-2 text-white font-bold"
-        id="cart-btn"
-      >
-        (<span id="cart-count">0</span>) Veja meu carrinho
-        <i class="fa fa-cart-plus texy-lg text-white"></i>
-      </button>
-    </footer>
-    <!-- BUTTON CART BTN -->
-
     <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </body>
 </html>
